@@ -34,6 +34,7 @@ describe Autoscaler::LinearScalingStrategy do
     strategy = cut.new(5, 2)
     strategy.call(system, 1).should == 3
   end
+<<<<<<< HEAD
 
   it "doesn't scale down past the number of active workers" do
     system = TestSystem.new(0)
@@ -42,4 +43,6 @@ describe Autoscaler::LinearScalingStrategy do
     system.define_singleton_method(:workers) { 2 }
     strategy.call(system, 1).should == 2
   end
+=======
+>>>>>>> ignore_scheduled_and_retrying
 end
