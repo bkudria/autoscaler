@@ -3,7 +3,7 @@
 ## 0.8.0
 
 - Extracted caching of Heroku worker counts and added experimental Redis cache
-    scaler.counter_cache = Autoscaler::CounterCacheRedis(Sidekiq.method(:redis))
+    scaler.counter_cache = Autoscaler::CounterCacheRedis.new(Sidekiq.method(:redis))
 
 ## 0.7.0
 
